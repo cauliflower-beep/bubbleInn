@@ -7,4 +7,5 @@ func main(){
 	fmt.Println("hello gin~")
 	fmt.Println("初始化一个web引擎...")
 	fmt.Println("设置监听端口8080...")
+	fmt.Println("开始监听...")
 }
