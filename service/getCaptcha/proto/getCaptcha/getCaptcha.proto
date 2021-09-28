@@ -1,0 +1,21 @@
+syntax = "proto3";
+option go_package="./proto/getCaptcha";
+package go.micro.service.getCaptcha;
+
+service GetCaptcha {
+	rpc Call(Request) returns (Response) {}
+}
+
+message Message {
+	string say = 1;
+}
+
+message Request {
+	string uuid = 1;
+}
+
+//生成图片本质上是二进制数据
+message Response {
+	bytes img = 1;	//使用切片存储图片信息
+}
+
